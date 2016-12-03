@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Silnia
@@ -27,10 +28,7 @@ namespace Silnia
         private void liczButton_Click(object sender, EventArgs e)
         {
             long r = long.Parse(textBox1.Text);
-            if (r!=0)
-            {
-                wynik *= r;
-            }
+            wynik = (r != 0) ? wynik * r : wynik;
             textBox1.Text = (r - 1).ToString();
             textBox2.Text = wynik.ToString();
         }
