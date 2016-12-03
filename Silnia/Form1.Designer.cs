@@ -35,6 +35,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // textBox1
@@ -55,7 +56,7 @@
             // 
             // liczButton
             // 
-            this.liczButton.Location = new System.Drawing.Point(12, 55);
+            this.liczButton.Location = new System.Drawing.Point(11, 108);
             this.liczButton.Name = "liczButton";
             this.liczButton.Size = new System.Drawing.Size(75, 23);
             this.liczButton.TabIndex = 2;
@@ -65,7 +66,7 @@
             // 
             // clrButton
             // 
-            this.clrButton.Location = new System.Drawing.Point(93, 55);
+            this.clrButton.Location = new System.Drawing.Point(92, 108);
             this.clrButton.Name = "clrButton";
             this.clrButton.Size = new System.Drawing.Size(45, 23);
             this.clrButton.TabIndex = 3;
@@ -75,7 +76,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(144, 55);
+            this.exitButton.Location = new System.Drawing.Point(143, 108);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 4;
@@ -101,12 +102,20 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Wynik";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 55);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(206, 47);
+            this.progressBar1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(230, 87);
+            this.ClientSize = new System.Drawing.Size(230, 143);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.exitButton);
@@ -131,6 +140,7 @@
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
