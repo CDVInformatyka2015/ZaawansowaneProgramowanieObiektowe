@@ -44,34 +44,34 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(14, 29);
+            this.textBox1.Location = new System.Drawing.Point(16, 33);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(116, 23);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "1";
             // 
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(120, 29);
+            this.textBox2.Location = new System.Drawing.Point(140, 33);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(116, 23);
             this.textBox2.TabIndex = 1;
             this.textBox2.Text = "1";
             // 
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(226, 29);
+            this.textBox3.Location = new System.Drawing.Point(264, 33);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(116, 23);
             this.textBox3.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(14, 55);
+            this.button1.Location = new System.Drawing.Point(16, 63);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(117, 27);
             this.button1.TabIndex = 3;
             this.button1.Text = "Dodawanie";
             this.button1.UseVisualStyleBackColor = true;
@@ -79,9 +79,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(226, 55);
+            this.button2.Location = new System.Drawing.Point(264, 63);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 23);
+            this.button2.Size = new System.Drawing.Size(48, 27);
             this.button2.TabIndex = 4;
             this.button2.Text = "CLR";
             this.button2.UseVisualStyleBackColor = true;
@@ -89,9 +89,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(273, 55);
+            this.button3.Location = new System.Drawing.Point(318, 63);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 23);
+            this.button3.Size = new System.Drawing.Size(62, 27);
             this.button3.TabIndex = 5;
             this.button3.Text = "Quit";
             this.button3.UseVisualStyleBackColor = true;
@@ -100,35 +100,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(15, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
+            this.label1.Size = new System.Drawing.Size(22, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "n-1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(117, 13);
+            this.label2.Location = new System.Drawing.Point(136, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.Size = new System.Drawing.Size(13, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "n";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(223, 13);
+            this.label3.Location = new System.Drawing.Point(260, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(38, 15);
             this.label3.TabIndex = 8;
             this.label3.Text = "Result";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(120, 55);
+            this.button4.Location = new System.Drawing.Point(140, 63);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 23);
+            this.button4.Size = new System.Drawing.Size(117, 27);
             this.button4.TabIndex = 9;
             this.button4.Text = "Odejmowanie";
             this.button4.UseVisualStyleBackColor = true;
@@ -136,9 +136,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 92);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(398, 106);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -149,6 +150,7 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Ciąg Fibonnaciego";
