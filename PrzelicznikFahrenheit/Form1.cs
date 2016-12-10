@@ -41,7 +41,11 @@ namespace PrzelicznikFahrenheit
                 progressBar1.Value = 200;
                 return;
             }
-
+            if (temp < 100)
+            {
+                progressBar1.Value = 0;
+                return;
+            }
             progressBar1.Value = temp + 100;
         }
     }

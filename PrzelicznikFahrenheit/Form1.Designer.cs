@@ -154,8 +154,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(487, 98);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -169,8 +168,13 @@
             this.Controls.Add(this.fahrenheit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.celsjusz);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Kalkulator Temperatur";
             this.ResumeLayout(false);
             this.PerformLayout();
 
