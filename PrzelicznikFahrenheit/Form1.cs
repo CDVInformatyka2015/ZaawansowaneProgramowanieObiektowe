@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PrzelicznikFahrenheit
@@ -22,33 +15,34 @@ namespace PrzelicznikFahrenheit
 
         private void CtoF_Click(object sender, EventArgs e)
         {
-            fahrenheit.Text = temperature.toFahrenheit(double.Parse(celsjusz.Text)).ToString();
+            fahrenheit.Text = temperature.toStringFahrenheit(celsjusz.Text);
         }
 
         private void FtoC_Click(object sender, EventArgs e)
         {
-            celsjusz.Text = temperature.toCelsjusz(double.Parse(fahrenheit.Text)).ToString();
+            celsjusz.Text = temperature.toStringCelsjusz(fahrenheit.Text);
         }
 
         private void showCelsjusz_Click(object sender, EventArgs e)
         {
-            toProgressBar((int)double.Parse(celsjusz.Text));
+            toProgressBar(celsjusz.Text);
         }
 
         private void showFahrenheit_Click(object sender, EventArgs e)
         {
-            toProgressBar((int)double.Parse(fahrenheit.Text));
+            toProgressBar(fahrenheit.Text);
         }
 
-        private void toProgressBar(int value)
+        private void toProgressBar(string value)
         {
-            if (value > 100)
+            int temp = (int)double.Parse(value);
+            if (temp > 100)
             {
                 progressBar1.Value = 200;
                 return;
             }
 
-            progressBar1.Value = value + 100;
+            progressBar1.Value = temp + 100;
         }
     }
 }
