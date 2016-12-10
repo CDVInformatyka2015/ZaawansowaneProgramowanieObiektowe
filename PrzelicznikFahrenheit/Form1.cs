@@ -15,12 +15,18 @@ namespace PrzelicznikFahrenheit
 
         private void CtoF_Click(object sender, EventArgs e)
         {
-            fahrenheit.Text = temperature.toStringFahrenheit(celsjusz.Text);
+            if (isNumber(celsjusz.Text))
+            {
+                fahrenheit.Text = temperature.toStringFahrenheit(celsjusz.Text);
+            }
         }
 
         private void FtoC_Click(object sender, EventArgs e)
         {
-            celsjusz.Text = temperature.toStringCelsjusz(fahrenheit.Text);
+            if (isNumber(fahrenheit.Text))
+            {
+                celsjusz.Text = temperature.toStringCelsjusz(fahrenheit.Text);
+            }
         }
 
         private void showCelsjusz_Click(object sender, EventArgs e)
@@ -41,12 +47,27 @@ namespace PrzelicznikFahrenheit
                 progressBar1.Value = 200;
                 return;
             }
-            if (temp < 100)
+            if (temp < 0)
             {
                 progressBar1.Value = 0;
                 return;
             }
+
             progressBar1.Value = temp + 100;
+        }
+
+        private bool isNumber(string temp)
+        {
+            try
+            {
+                double timp = double.Parse(temp);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "BŁĄD!");
+                return false;
+            }
+            return true;
         }
     }
 }
