@@ -4,6 +4,11 @@
     {
         double temp;
 
+        private double FromStringParser(string temp)
+        {
+            return double.Parse(temp);
+        }
+
         public double toCelsjusz(double f)
         {
             return (5.0 / 9.0) * (f - 32);
@@ -16,13 +21,13 @@
 
         public string toStringCelsjusz(string f)
         {
-            temp = double.Parse(f);
+            temp = FromStringParser(f);
             return toCelsjusz(temp).ToString();
         }
 
         public string toStringFahrenheit(string c)
         {
-            temp = double.Parse(c);
+            temp = FromStringParser(c);
             return toFahrenheit(temp).ToString();
         }
     }
