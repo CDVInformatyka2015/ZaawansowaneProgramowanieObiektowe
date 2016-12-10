@@ -41,6 +41,7 @@ namespace Fibonnaciego
             {
                 return;
             }
+
             textBox1.Text = textBox2.Text;
             textBox2.Text = textBox3.Text;
             textBox3.Text = (int.Parse(textBox1.Text) - int.Parse(textBox2.Text)).ToString();
