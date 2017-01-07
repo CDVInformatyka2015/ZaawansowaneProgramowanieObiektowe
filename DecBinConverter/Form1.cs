@@ -7,19 +7,10 @@ namespace DecBinConverter
     public partial class Form1 : Form
     {
         HexConverter converter = new HexConverter();
-        List<TextBox> textBoxes = new List<TextBox>();
 
         public Form1()
         {
             InitializeComponent();
-            textBoxes.Add(bin1);
-            textBoxes.Add(bin2);
-            textBoxes.Add(bin3);
-            textBoxes.Add(bin4);
-            textBoxes.Add(bin5);
-            textBoxes.Add(bin6);
-            textBoxes.Add(bin7);
-            textBoxes.Add(bin8);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,8 +22,10 @@ namespace DecBinConverter
         private void button2_Click(object sender, EventArgs e)
         {
             string suma = "";
-            foreach (TextBox item in textBoxes) {
-                 suma += item.Text;
+            for (int i = 1; i < 9; i++)
+            {
+                TextBox box = (TextBox)Controls["bin" + i];
+                suma += box.Text;
             }
             textBox1.Text = converter.BinToDec(suma);
         }
