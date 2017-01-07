@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrzelicznikFahrenheit", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecBinConverter", "DecBinConverter\DecBinConverter.csproj", "{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zegarek", "Zegarek\Zegarek.csproj", "{3FC2A820-42A4-481B-AF8B-B52D924E2AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragNDrop", "DragNDrop\DragNDrop.csproj", "{5B3F39E0-BAD4-4C4D-B6ED-F5462E83B1F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC2A820-42A4-481B-AF8B-B52D924E2AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC2A820-42A4-481B-AF8B-B52D924E2AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC2A820-42A4-481B-AF8B-B52D924E2AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC2A820-42A4-481B-AF8B-B52D924E2AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3F39E0-BAD4-4C4D-B6ED-F5462E83B1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3F39E0-BAD4-4C4D-B6ED-F5462E83B1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3F39E0-BAD4-4C4D-B6ED-F5462E83B1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3F39E0-BAD4-4C4D-B6ED-F5462E83B1F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
