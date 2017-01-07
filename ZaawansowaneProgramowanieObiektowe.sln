@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{1D11D796-65D8-4508-9F00-AF1F4FA160E6}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonnaciego", "Fibonnaciego\Fibonnaciego.csproj", "{B9F9C43A-276C-45B7-91B6-B27CEF3985AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrzelicznikFahrenheit", "PrzelicznikFahrenheit\PrzelicznikFahrenheit.csproj", "{7D286710-3B80-4A5B-A9BB-9CFD679E8D66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecBinConverter", "DecBinConverter\DecBinConverter.csproj", "{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{7D286710-3B80-4A5B-A9BB-9CFD679E8D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D286710-3B80-4A5B-A9BB-9CFD679E8D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D286710-3B80-4A5B-A9BB-9CFD679E8D66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D52D8F9-BB19-49CE-8712-FF863F9B7E7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
