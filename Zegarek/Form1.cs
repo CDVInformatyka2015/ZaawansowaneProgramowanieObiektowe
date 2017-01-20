@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,10 +17,35 @@ namespace Zegarek
         private bool _budzikStatus = false;
         private uint _budzikHour;
         private uint _budzikMinutes;
-        
+        private readonly string _dayImage = Path.GetDirectoryName(Application.ExecutablePath) + "\\day.jpg";
+        private readonly string _nightImage = Path.GetDirectoryName(Application.ExecutablePath) + "\\night.jpg";
+        private Image _dayImageFile;
+        private Image _nightImageFile;
+
+
         public Form1()
         {
             InitializeComponent();
+            if (File.Exists(_dayImage))
+            {
+                File.Delete(_dayImage);
+            };
+            if (File.Exists(_nightImage))
+            {
+                File.Delete(_nightImage);
+            };
+
+            using (var wc = new WebClient())
+            {
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile("https://c.tadst.com/gfx/sunrise.png", _dayImage);
+                }
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile("https://i.ytimg.com/vi/W8tVwiYsgHg/maxresdefault.jpg", _nightImage);
+                }
+            }
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -29,7 +56,7 @@ namespace Zegarek
 
         private void Time()
         {
-            DateTime data = DateTime.Now;
+            var data = DateTime.Now;
 
             richTextBox1.Text = data.Hour.ToString();
             richTextBox2.Text = data.Minute.ToString();
@@ -37,20 +64,28 @@ namespace Zegarek
 
             if (data.Second % 2 == 0)
             {
-                label1.Text = "";
-                label2.Text = "";
+                label1.Text = label2.Text = "";
             } else
             {
-                label1.Text = ":";
-                label2.Text = ":";
+                label1.Text = label2.Text = ":";
             }
 
-            if (_budzikStatus == true && _budzikHour == data.Hour && _budzikMinutes == data.Minute)
+            if (data.Hour > 6 && data.Hour < 18)
             {
-                _budzikStatus = false;
-                budzikStatusDisplay.Text = "";
-                MessageBox.Show("OBUDŹ SIĘ!", "Alarm!");
+                _dayImageFile = new Bitmap(_dayImage);
+                this.BackgroundImage = _dayImageFile;
             }
+            else
+            {
+                _nightImageFile = new Bitmap(_nightImage);
+                this.BackgroundImage = _nightImageFile;
+            }
+
+            if (_budzikStatus != true || _budzikHour != data.Hour || _budzikMinutes != data.Minute) return;
+
+            _budzikStatus = false;
+            budzikStatusDisplay.Text = "";
+            MessageBox.Show(@"OBUDŹ SIĘ!", @"Alarm!");
         }
 
         private void stopButton_Click(object sender, EventArgs e)
@@ -73,7 +108,7 @@ namespace Zegarek
             }
             _budzikStatus = true;
             budzikH.Text = budzikM.Text = "";
-            budzikStatusDisplay.Text = "Budzik ustawiony na " + _budzikHour + ":" + _budzikMinutes;
+            budzikStatusDisplay.Text = @"Budzik: " + _budzikHour + @":" + _budzikMinutes;
         }
     }
 }
