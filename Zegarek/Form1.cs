@@ -12,6 +12,10 @@ namespace Zegarek
 {
     public partial class Form1 : Form
     {
+        private bool _budzikStatus = false;
+        private uint _budzikHour;
+        private uint _budzikMinutes;
+        
         public Form1()
         {
             InitializeComponent();
@@ -20,10 +24,10 @@ namespace Zegarek
         private void startButton_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            time();
+            Time();
         }
 
-        private void time()
+        private void Time()
         {
             DateTime data = DateTime.Now;
 
@@ -41,8 +45,10 @@ namespace Zegarek
                 label2.Text = ":";
             }
 
-            if (data.Second == 0)
+            if (_budzikStatus == true && _budzikHour == data.Hour && _budzikMinutes == data.Minute)
             {
+                _budzikStatus = false;
+                budzikStatusDisplay.Text = "";
                 MessageBox.Show("OBUDŹ SIĘ!", "Alarm!");
             }
         }
@@ -50,6 +56,24 @@ namespace Zegarek
         private void stopButton_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
+        }
+
+        private void budzik_Click(object sender, EventArgs e)
+        {
+            if (budzikH.Text == "" || budzikM.Text == "") return;
+            try
+            {
+                _budzikHour = uint.Parse(budzikH.Text);
+                _budzikMinutes = uint.Parse(budzikM.Text);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                budzikH.Text = budzikM.Text = "";
+            }
+            _budzikStatus = true;
+            budzikH.Text = budzikM.Text = "";
+            budzikStatusDisplay.Text = "Budzik ustawiony na " + _budzikHour + ":" + _budzikMinutes;
         }
     }
 }

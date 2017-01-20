@@ -38,6 +38,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.budzikH = new System.Windows.Forms.RichTextBox();
+            this.budzikM = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.budzik = new System.Windows.Forms.Button();
+            this.budzikStatusDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -133,11 +138,68 @@
             this.label2.TabIndex = 7;
             this.label2.Text = ":";
             // 
+            // budzikH
+            // 
+            this.budzikH.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.25F);
+            this.budzikH.Location = new System.Drawing.Point(12, 143);
+            this.budzikH.MaxLength = 2;
+            this.budzikH.Multiline = false;
+            this.budzikH.Name = "budzikH";
+            this.budzikH.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.budzikH.Size = new System.Drawing.Size(100, 96);
+            this.budzikH.TabIndex = 8;
+            this.budzikH.Text = "";
+            // 
+            // budzikM
+            // 
+            this.budzikM.Font = new System.Drawing.Font("Microsoft Sans Serif", 40.25F);
+            this.budzikM.Location = new System.Drawing.Point(166, 143);
+            this.budzikM.MaxLength = 2;
+            this.budzikM.Multiline = false;
+            this.budzikM.Name = "budzikM";
+            this.budzikM.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.budzikM.Size = new System.Drawing.Size(100, 96);
+            this.budzikM.TabIndex = 9;
+            this.budzikM.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(118, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 63);
+            this.label3.TabIndex = 10;
+            this.label3.Text = ":";
+            // 
+            // budzik
+            // 
+            this.budzik.Location = new System.Drawing.Point(272, 181);
+            this.budzik.Name = "budzik";
+            this.budzik.Size = new System.Drawing.Size(100, 23);
+            this.budzik.TabIndex = 11;
+            this.budzik.Text = "Ustaw budzik";
+            this.budzik.UseVisualStyleBackColor = true;
+            this.budzik.Click += new System.EventHandler(this.budzik_Click);
+            // 
+            // budzikStatusDisplay
+            // 
+            this.budzikStatusDisplay.AutoSize = true;
+            this.budzikStatusDisplay.Location = new System.Drawing.Point(269, 207);
+            this.budzikStatusDisplay.Name = "budzikStatusDisplay";
+            this.budzikStatusDisplay.Size = new System.Drawing.Size(0, 13);
+            this.budzikStatusDisplay.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 148);
+            this.ClientSize = new System.Drawing.Size(428, 349);
+            this.Controls.Add(this.budzikStatusDisplay);
+            this.Controls.Add(this.budzik);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.budzikM);
+            this.Controls.Add(this.budzikH);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -164,6 +226,11 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox budzikH;
+        private System.Windows.Forms.RichTextBox budzikM;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button budzik;
+        private System.Windows.Forms.Label budzikStatusDisplay;
     }
 }
 
